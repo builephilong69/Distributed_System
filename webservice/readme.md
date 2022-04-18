@@ -39,9 +39,39 @@ We could buid web services in 2 ways:
 (SIMPLE OBJECT ACCESS PROTOCOL)
 - XML based protocol for accessing web services
 - PLatform/language independent technology integrated
+![image](https://user-images.githubusercontent.com/80462415/163751763-dbb63c12-5d3c-4649-96f5-c0ed388736bf.png)
 
 # **Key components**:
 🌐 go to : https://gpcoder.com/5572-tim-hieu-ve-web-service/
 - SOAP: XML-based protocol for accessing  web services. It is also a W3C recommendation for application integration over networks
 - Universal Desciption, Discovery, and Integration(UDDI): XML-based framework for describing discorvering, and integrating web services
 - Web Services Description Language (WSDL): an XML doc contain information to build Web services
+
+## 😑 RESTful webservice
+**RE**presentational State Transfer (REST)
+- REST is a architectural style application, but not a protocol
+- RESTful Web Srevice is the Web Services written based on REST. REST is used broadly to replace the Web Service based on SOAP and WSDL
+- REST define the architecturing rule for you to design Web serices, focus on the system resource, including how the system resource is formatted and uploaded through HTTP, by different programming languages. By number of Internet servics, REST has been popped off recent years as a favorite deisng model. 
+- In practical, REST has great impact and almost could replace SOAP or WSDL since it is much easier to use
+- **REST characteristics**
+        1. Use HTTP method 
+        2. Stateless
+        3. Display folder architecture (URLS)
+        4. Using JSON, XML, or both
+![image](https://user-images.githubusercontent.com/80462415/163752649-38e5a4e0-7fc8-4ebc-9506-4bdc4dc009c8.png)
+# java support
+- JAX-WS: for developing SOAP web services
+    - RPC styles: uses method name, parameters to generate XML structure
+    - Document styles: sends SOAP message 
+    - ..
+## Implementations
+- Building SOAP web service using JAX-WS, RPC style
+- Building SOAP web service using JAX-WS, Document style
+- Building a RESTful web service using JAX-RS(using the Jersey implementation)
+# Step to build a SOAP web service with JAX-WS RPC 
+1. Define a remote interface
+# Step to build RESFful web services
+1. Define the remote server component
+2. Implement the deployment the deployment descriptor configurations
+3. Write the web component that is the default home page of the web service application
+4. Write the client program to consume the web service
