@@ -16,3 +16,18 @@
     + Choose one or more attributes ass the partitioning attributes
     + Choose hash Function h with range 0..n-1
     + Let i denote result of hash function h applied to the partitioning attribute value of a tuple. Sned tuple to node i.
+### Type of skew
+- Note that **execuition skew** can occur even without data distribution skew
+        + E.g relation range-partitioned on date, and most queries access tuples with recent dates
+
+## Handling skew in Range-Partitioning
+-  To create a balanced partitioning vetor:
+        + Sort the relation on the partitioning attribute
+        + Construct the partition vector by scanning the relation in sorted order as follows
+
+            >> After every 1/n (th) há bên read, the value ò the partitioning attribute ò the next tuple is added to the partition vector
+        + n denotes the number of partitions to be constructed
+        + imbalances can result if duplicates are present in partitioning attributes
+- To reduce cost
+        + Partitioning vector can be created using a random sample of tuples
+        + Alternatively, histograms can be used to create the partitioning vector.
