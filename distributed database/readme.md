@@ -38,6 +38,8 @@
         + Hash partitioning is also possible
 - Mapping of virtual nodes to real nodes:
         + Round-robin: virtual node i mapped to real node (i mod n) +1
+
+
         + Mapping table: mapping table virtual_to_real_map[] tracks which virtual node is on which real node
 
 
