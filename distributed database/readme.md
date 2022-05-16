@@ -30,3 +30,13 @@
 - To reduce cost
         + Partitioning vector can be created using a random sample of tuples
         + Alternatively, histograms can be used to create the partitioning vector.
+## Virtual Node partitioning
+- Key idea: pretend there are several times (10x to 20x) as many virtual nodes as real nodes
+        + Virtual nodes are mapped to real nodes
+        + Tuple partitioned accross virtual nodes using range-partitioning vector
+        + Hash partitioning is also possible
+- Mapping of virtual nodes to real nodes:
+        + Round-robin: virtual node i mapped to real node (i mod n) +1
+        + Mapping table: mapping table virtual_to_real_map[] tracks which virtual node is on which real node
+          - Allows skew to be handled by moving virtual nodes from more loaded nodes to less loaded nodes
+          - Both data distribution skew and execition skew can be handled
