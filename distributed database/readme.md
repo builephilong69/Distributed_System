@@ -23,9 +23,8 @@
 ## Handling skew in Range-Partitioning
 -  To create a balanced partitioning vetor:
         + Sort the relation on the partitioning attribute
-        + Construct the partition vector by scanning the relation in sorted order as follows
-
-            >> After every 1/n (th) há bên read, the value ò the partitioning attribute ò the next tuple is added to the partition vector
+        + Construct the partition vector by scanning the relation in sorted order as follow
+        + After every 1/n (th) has been read, the value òf the partitioning attribute òf the next tuple is added to the partition vector
         + n denotes the number of partitions to be constructed
         + imbalances can result if duplicates are present in partitioning attributes
 - To reduce cost
