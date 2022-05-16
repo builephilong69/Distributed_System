@@ -47,3 +47,6 @@
 
           - Allows skew to be handled by moving virtual nodes from more loaded nodes to less loaded nodes
           - Both data distribution skew and execition skew can be handled
+# Dinamic Repartitioning
+- Virtual nodes in such a scheme are often called tablets
+- Example of initial partition table and parition table after a split of table 6 and move
