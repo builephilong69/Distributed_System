@@ -32,6 +32,7 @@
         + Alternatively, histograms can be used to create the partitioning vector.
 ## Virtual Node partitioning
 - Key idea: pretend there are several times (10x to 20x) as many virtual nodes as real nodes
+
         + Virtual nodes are mapped to real nodes
         + Tuple partitioned accross virtual nodes using range-partitioning vector
         + Hash partitioning is also possible
