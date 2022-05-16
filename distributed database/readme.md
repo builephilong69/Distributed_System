@@ -37,6 +37,8 @@
         + Tuple partitioned accross virtual nodes using range-partitioning vector
         + Hash partitioning is also possible
 - Mapping of virtual nodes to real nodes:
+        
+        
         + Round-robin: virtual node i mapped to real node (i mod n) +1
 
 
